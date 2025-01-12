@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct TrainingViewGarasport: View {
+struct TrainingViewWinersport: View {
     @StateObject var vm: TrainViewModel
     @Environment(\.dismiss) var dismiss
     
@@ -179,7 +179,7 @@ struct TrainingViewGarasport: View {
 }
 
 #Preview {
-    TrainingViewGarasport(sportType: .basketball)
+    TrainingViewWinersport(sportType: .basketball)
 }
 
 class TrainViewModel: ObservableObject {
@@ -196,7 +196,7 @@ class TrainViewModel: ObservableObject {
     let rate: Int
     let sportType: SportTypes
     
-    @Published var status: ViewTypes = .finish
+    @Published var status: ViewTypes = .start
     @Published var seconds = 0
     @Published var selectedExs = 1
     

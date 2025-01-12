@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct QuotesViewGarasport: View {
+struct QuotesViewWinersport: View {
     let quotes: [String: String] = [
         "The only way to prove you are a good sport is to lose." : "Ernie Banks",
         "Success is where preparation and opportunity meet." : "Bobby Unser",
@@ -88,7 +88,7 @@ struct QuotesViewGarasport: View {
             Spacer()
             
             NavigationLink {
-                PrivacyViewGarasport(showLoading: .constant(true), fromMainView: true)
+                PrivacyViewWinersport(showLoading: .constant(true), fromMainView: true)
             } label: {
                 Text("Privacy Policy")
                     .withFont(size: 18, weight: .light, color: .white)
@@ -116,6 +116,6 @@ struct QuotesViewGarasport: View {
 }
 
 #Preview {
-    ContentViewGarasport(showLoading: false, selectedTab: .quotes)
+    ContentViewWinersport(showLoading: false, selectedTab: .quotes)
 }
 

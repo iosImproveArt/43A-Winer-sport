@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct PrivacyViewGarasport: View {
+struct PrivacyViewWinersport: View {
     @AppStorage("firstInApp") var firstInApp = true
     @Environment(\.dismiss) var dismiss
     @Binding var showLoading: Bool
@@ -110,5 +110,5 @@ struct PrivacyViewGarasport: View {
 }
 
 #Preview {
-    PrivacyViewGarasport(showLoading: .constant(true), fromMainView: false)
+    PrivacyViewWinersport(showLoading: .constant(true), fromMainView: false)
 }

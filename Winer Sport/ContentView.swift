@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct ContentViewGarasport: View {
+struct ContentViewWinersport: View {
     @AppStorage("wasTrained") var wasTrained = false
     @State var showLoading = true
     @State var selectedTab: Tabs = .home
@@ -32,11 +32,11 @@ struct ContentViewGarasport: View {
                         Group {
                             switch selectedTab {
                             case .home:
-                                HomeViewGarasport()
+                                HomeViewWinersport()
                             case .profile:
                                 KcalView()
                             case .quotes:
-                                QuotesViewGarasport()
+                                QuotesViewWinersport()
                             case .stretch:
                                 DayliStrerchView()
                             }
@@ -50,9 +50,9 @@ struct ContentViewGarasport: View {
                 }
             }
             
-            OnboardingViewGarasport()
+            OnboardingViewWinersport()
             
-            LoadingViewGarasport(showView: $showLoading)
+            LoadingViewWinersport(showView: $showLoading)
                 .opacity(showLoading ? 1: 0)
                 .onChange(of: showLoading) { newValue in
                     AppDelegate.orientationLock = .portrait
@@ -191,7 +191,7 @@ struct ContentViewGarasport: View {
 }
 
 #Preview {
-    ContentViewGarasport(showLoading: false)
+    ContentViewWinersport(showLoading: false)
 }
 
 

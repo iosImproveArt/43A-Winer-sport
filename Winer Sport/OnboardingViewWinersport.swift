@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct OnboardingViewGarasport: View {
+struct OnboardingViewWinersport: View {
     @AppStorage("showOnboarding") var showOnboarding = true
     @State private var selected = 1
     
@@ -51,5 +51,5 @@ struct OnboardingViewGarasport: View {
 }
 
 #Preview {
-    OnboardingViewGarasport()
+    OnboardingViewWinersport()
 }

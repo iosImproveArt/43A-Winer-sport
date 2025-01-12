@@ -25,7 +25,7 @@ struct Prize_Sport_LifeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentViewGarasport()
+            ContentViewWinersport()
                 .preferredColorScheme(.dark)
         }
     }
