@@ -6,12 +6,12 @@ workflows:
         
         ios_signing:
             distribution_type: app_store
-            bundle_identifier: com.garasport
+            bundle_identifier: com.sportwiner.cemre
             
         groups:
             - DEFAULT
         vars:
-          BUNDLE_ID: "com.garasport"
+          BUNDLE_ID: "com.sportwiner.cemre"
           XCODE_WORK: "Winer Sport.xcodeproj"
           XCODE_SCHEME: "Winer Sport"
           

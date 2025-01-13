@@ -11,7 +11,7 @@ struct PrivacyViewWinersport: View {
     @AppStorage("urlString") var urlString = ""
     
     var bg: Color {
-        urlString.isEmpty ? Color.hex("#321950"): .black
+        urlString.isEmpty ? Color.hex("#331E49"): .black
     }
     
     var erverv = 134134
