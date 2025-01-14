@@ -369,6 +369,12 @@ struct KcalView: View {
                 }.disabled(!chekAnswers())
                     .grayscale(!chekAnswers() ? 1: 0)
                     .padding(.top)
+                
+                if !chekAnswers() {
+                    Text("Enter valid data.")
+                        .withFont(size: 15, weight: .medium)
+                        .padding(.bottom)
+                }
             }
         }
     }
