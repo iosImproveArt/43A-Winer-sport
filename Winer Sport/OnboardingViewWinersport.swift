@@ -6,17 +6,51 @@ struct OnboardingViewWinersport: View {
     @AppStorage("showOnboarding") var showOnboarding = true
     @State private var selected = 1
     
-      var erverv = 134134
-    var ceqfcwrefc = 13413.13413
-    func qrevqrvrg() -> CGFloat {
-        return 314134.1343
-    }
-    func vwrwrqrf() {
-        print("wrv")
-        print(134)
-    }
-    var wtywtyw = [24524:"wrvwr"]
-    var twtyw5gw5tgw = 4524
+    var name: String = "Default Name"
+        var age: Int = 0
+        var isActive: Bool = false
+        var scores: [Int] = [10, 20, 30]
+        var createdDate: Date = Date()
+        
+        // Функції
+        func printDetails() {
+            print("Name: \(name), Age: \(age), Active: \(isActive)")
+        }
+        
+        mutating func incrementAge(by years: Int) {
+            age += years
+        }
+        
+        func averageScore() -> Double {
+            guard !scores.isEmpty else { return 0.0 }
+            let total = scores.reduce(0, +)
+            return Double(total) / Double(scores.count)
+        }
+        
+        mutating func toggleActiveState() {
+            isActive.toggle()
+        }
+        
+        func isAdult() -> Bool {
+            return age >= 18
+        }
+        
+        func greeting() -> String {
+            return "Hello, \(name)! Welcome back!"
+        }
+        
+        mutating func addScore(_ newScore: Int) {
+            scores.append(newScore)
+        }
+        
+        func formatCreatedDate() -> String {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .short
+            return formatter.string(from: createdDate)
+        }
+    
+    
     var body: some View {
         VStack {
             Spacer()
@@ -35,7 +69,7 @@ struct OnboardingViewWinersport: View {
                         .foregroundColor(index == selected ? .hex("FEE600"): .white)
                 }
             }.padding(.bottom)
-        }.background(2)
+        }.backgroundWinsport(2)
             .onTapGesture {
                 if selected < 5 {
                     withAnimation {

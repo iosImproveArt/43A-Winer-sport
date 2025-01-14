@@ -10,17 +10,49 @@ struct TrainingViewWinersport: View {
         _vm = StateObject(wrappedValue: TrainViewModel(sportType: sportType))
     }
     
-      var erverv = 134134
-    var ceqfcwrefc = 13413.13413
-    func qrevqrvrg() -> CGFloat {
-        return 314134.1343
+      var name: String = "Default Name"
+    var age: Int = 0
+    var isActive: Bool = false
+    var scores: [Int] = [10, 20, 30]
+    var createdDate: Date = Date()
+    
+    // Функції
+    func printDetails() {
+        print("Name: \(name), Age: \(age), Active: \(isActive)")
     }
-    func vwrwrqrf() {
-        print("wrv")
-        print(134)
+    
+    mutating func incrementAge(by years: Int) {
+        age += years
     }
-    var wtywtyw = [24524:"wrvwr"]
-    var twtyw5gw5tgw = 4524
+    
+    func averageScore() -> Double {
+        guard !scores.isEmpty else { return 0.0 }
+        let total = scores.reduce(0, +)
+        return Double(total) / Double(scores.count)
+    }
+    
+    mutating func toggleActiveState() {
+        isActive.toggle()
+    }
+    
+    func isAdult() -> Bool {
+        return age >= 18
+    }
+    
+    func greeting() -> String {
+        return "Hello, \(name)! Welcome back!"
+    }
+    
+    mutating func addScore(_ newScore: Int) {
+        scores.append(newScore)
+    }
+    
+    func formatCreatedDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: createdDate)
+    }
     
     var body: some View {
         VStack {
@@ -50,13 +82,13 @@ struct TrainingViewWinersport: View {
                 }
             } label: {
                 Text(vm.status == .start ? "Start": "Next")
-                    .withFont(size: 18, weight: .medium, color: .hex("2E023F"))
+                    .withFontWWinsport(size: 18, weight: .medium, color: .hex("2E023F"))
                     .padding(.vertical, 11)
                     .padding(.horizontal, 30)
                     .background(Color.hex("FEE600"))
                     .cornerRadius(13.17)
             }
-        }.background(3)
+        }.backgroundWinsport(3)
             .overlay {
                 if vm.status == .finish {
                     finishView
@@ -75,7 +107,7 @@ struct TrainingViewWinersport: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 22)
                     Text("Back")
-                        .withFont(size: 20, weight: .light)
+                        .withFontWWinsport(size: 20, weight: .light)
                 }.foregroundStyle(.white)
             }
             
@@ -83,7 +115,7 @@ struct TrainingViewWinersport: View {
             
             if vm.status == .inProgres {
                 Text("\(vm.selectedExs)/5")
-                .withFont(size: 19.5, weight: .semibold, color: .hex("FEE600"))
+                .withFontWWinsport(size: 19.5, weight: .semibold, color: .hex("FEE600"))
                 .transition(.move(edge: .trailing))
             } else if vm.status == .start {
                 Button {
@@ -104,7 +136,7 @@ struct TrainingViewWinersport: View {
             Spacer()
             
             Text("The workout\nis complete!")
-                .withFont(size: 40, weight: .semibold, color: .hex("FEE600"))
+                .withFontWWinsport(size: 40, weight: .semibold, color: .hex("FEE600"))
                 .padding(.vertical)
             
             HStack {
@@ -121,7 +153,7 @@ struct TrainingViewWinersport: View {
                     .frame(width: 100, height: 40)
                     .overlay {
                         Text("987/1000")
-                            .withFont(size: 19.34, weight: .regular)
+                            .withFontWWinsport(size: 19.34, weight: .regular)
                     }
             }
             
@@ -139,7 +171,7 @@ struct TrainingViewWinersport: View {
                     .frame(width: 100, height: 40)
                     .overlay {
                         Text("\(vm.seconds) sec")
-                            .withFont(size: 19.34, weight: .regular)
+                            .withFontWWinsport(size: 19.34, weight: .regular)
                     }
             }
             
@@ -157,7 +189,7 @@ struct TrainingViewWinersport: View {
                     .frame(width: 100, height: 40)
                     .overlay {
                         Text("\(vm.rate)/10")
-                            .withFont(size: 19.34, weight: .regular)
+                            .withFontWWinsport(size: 19.34, weight: .regular)
                     }
             }
             
@@ -167,14 +199,14 @@ struct TrainingViewWinersport: View {
                 dismiss()
             } label: {
                 Text("Complete the workout")
-                    .withFont(size: 18, weight: .medium, color: .hex("2E023F"))
+                    .withFontWWinsport(size: 18, weight: .medium, color: .hex("2E023F"))
                     .padding(.vertical, 11)
                     .padding(.horizontal, 30)
                     .background(Color.hex("FEE600"))
                     .cornerRadius(13.17)
             }
             .padding(.bottom)
-        }.background(4)
+        }.backgroundWinsport(4)
     }
 }
 

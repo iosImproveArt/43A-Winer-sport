@@ -9,17 +9,49 @@ struct HomeViewWinersport: View {
     
     @AppStorage("favourite") var favourite = ""
     
-    var erverv = 134134
-    var ceqfcwrefc = 13413.13413
-    func qrevqrvrg() -> CGFloat {
-        return 314134.1343
+    var name: String = "Default Name"
+    var age: Int = 0
+    var isActive: Bool = false
+    var scores: [Int] = [10, 20, 30]
+    var createdDate: Date = Date()
+    
+    // Функції
+    func printDetails() {
+        print("Name: \(name), Age: \(age), Active: \(isActive)")
     }
-    func vwrwrqrf() {
-        print("wrv")
-        print(134)
+    
+    mutating func incrementAge(by years: Int) {
+        age += years
     }
-    var wtywtyw = [24524:"wrvwr"]
-    var twtyw5gw5tgw = 4524
+    
+    func averageScore() -> Double {
+        guard !scores.isEmpty else { return 0.0 }
+        let total = scores.reduce(0, +)
+        return Double(total) / Double(scores.count)
+    }
+    
+    mutating func toggleActiveState() {
+        isActive.toggle()
+    }
+    
+    func isAdult() -> Bool {
+        return age >= 18
+    }
+    
+    func greeting() -> String {
+        return "Hello, \(name)! Welcome back!"
+    }
+    
+    mutating func addScore(_ newScore: Int) {
+        scores.append(newScore)
+    }
+    
+    func formatCreatedDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: createdDate)
+    }
     
     
     var body: some View {
@@ -104,7 +136,7 @@ struct HomeViewWinersport: View {
     }
     
     private var statsView: some View {
-        VStack(spacing: isSE ? 12: 20) {
+        VStack(spacing: isSEWinsport ? 12: 20) {
             HStack {
                 Spacer()
                 
@@ -113,7 +145,7 @@ struct HomeViewWinersport: View {
                     Image("homefield.label")
                         .overlay {
                             Text(wasTrained ? "1": "0")
-                                .withFont(size: 22.66, weight: .regular)
+                                .withFontWWinsport(size: 22.66, weight: .regular)
                         }
                 }
                 
@@ -124,7 +156,7 @@ struct HomeViewWinersport: View {
                     Image("homefield.label")
                         .overlay {
                             Text("\(secondsWaste / 60) min")
-                                .withFont(size: 22.66, weight: .regular)
+                                .withFontWWinsport(size: 22.66, weight: .regular)
                         }
                 }
                 
@@ -139,7 +171,7 @@ struct HomeViewWinersport: View {
                     Image("homefield.label")
                         .overlay {
                             Text(wasTrained ? formattedDateString(): "-")
-                                .withFont(size: 22.66, weight: .regular)
+                                .withFontWWinsport(size: 22.66, weight: .regular)
                         }
                 }
                 
@@ -150,7 +182,7 @@ struct HomeViewWinersport: View {
                     Image("homefield.label")
                         .overlay {
                             Text(wasTrained ? "976/1000": "-/1000")
-                                .withFont(size: 22.66, weight: .regular)
+                                .withFontWWinsport(size: 22.66, weight: .regular)
                         }
                 }
                 

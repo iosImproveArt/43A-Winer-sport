@@ -25,7 +25,7 @@ struct KcalView: View {
             } else {
                 HStack {
                     Text("Recommended daily calories per day:")
-                        .withFont(size: 25, weight: .regular)
+                        .withFontWWinsport(size: 25, weight: .regular)
                         .padding(.trailing, 50)
                     
                     Spacer()
@@ -55,11 +55,11 @@ struct KcalView: View {
                         .overlay {
                             VStack {
                                 Text("Calories")
-                                    .withFont(size: 22, weight: .medium)
+                                    .withFontWWinsport(size: 22, weight: .medium)
                                 Spacer()
                                 
                                 Text(String(kkcal))
-                                    .withFont(size: 23, weight: .thin, color: .black)
+                                    .withFontWWinsport(size: 23, weight: .thin, color: .black)
                                     .padding(.bottom, 25)
                             }
                         }
@@ -70,13 +70,13 @@ struct KcalView: View {
                         .overlay {
                             VStack {
                                 Text("Fat")
-                                    .withFont(size: 22, weight: .medium)
+                                    .withFontWWinsport(size: 22, weight: .medium)
                                     .padding(.top, 3)
                                 
                                 Spacer()
                                 
                                 Text("\(Int(Double(kkcal / 4) * 0.2))gr")
-                                    .withFont(size: 23, weight: .thin, color: .black)
+                                    .withFontWWinsport(size: 23, weight: .thin, color: .black)
                                     .padding(.bottom, 20)
                             }
                         }
@@ -87,12 +87,12 @@ struct KcalView: View {
                         .overlay {
                             VStack {
                                 Text("Protein")
-                                    .withFont(size: 22, weight: .medium)
+                                    .withFontWWinsport(size: 22, weight: .medium)
                                     .padding(.top, 3)
                                 Spacer()
                                 
                                 Text("\(Int(Double(kkcal / 4) * 0.3))gr")
-                                    .withFont(size: 23, weight: .thin, color: .black)
+                                    .withFontWWinsport(size: 23, weight: .thin, color: .black)
                                     .padding(.bottom, 20)
                             }
                         }
@@ -103,12 +103,12 @@ struct KcalView: View {
                         .overlay {
                             VStack {
                                 Text("Carbs")
-                                    .withFont(size: 22, weight: .medium)
+                                    .withFontWWinsport(size: 22, weight: .medium)
                                     .padding(.top, 3)
                                 Spacer()
                                 
                                 Text("\(Int(Double(kkcal / 4) * 0.5))gr")
-                                    .withFont(size: 23, weight: .thin, color: .black)
+                                    .withFontWWinsport(size: 23, weight: .thin, color: .black)
                                     .padding(.bottom, 20)
                             }
                         }
@@ -121,17 +121,17 @@ struct KcalView: View {
                     .overlay(alignment: .bottom) {
                         HStack {
                             Text("\(userWeight) kg")
-                                .withFont(size: 23, weight: .medium)
+                                .withFontWWinsport(size: 23, weight: .medium)
                             
                             Spacer()
                             
                             Text("\(formattedDateString())")
-                                .withFont(size: 23, weight: .regular)
+                                .withFontWWinsport(size: 23, weight: .regular)
                             
                             Spacer()
                             
                             Text("0%")
-                                .withFont(size: 23, weight: .regular)
+                                .withFontWWinsport(size: 23, weight: .regular)
                         }.padding(.horizontal, 30)
                             .padding(.bottom, 10)
                     }
@@ -156,40 +156,40 @@ struct KcalView: View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("Disclaimer")
-                    .withFont(size: 40, weight: .bold)
+                    .withFontWWinsport(size: 40, weight: .bold)
                     .padding(.bottom)
                 
                 Text("The calorie calculation in this app is based on the Basal Metabolic Rate (BMR) formula for men:")
-                    .withFont(size: 18, weight: .regular)
+                    .withFontWWinsport(size: 18, weight: .regular)
                 
                 Text("BMR = 66.4730 + (13.7516 × weight in kg) + (5.0033 × height in cm) – (6.7550 × age in years).")
-                    .withFont(size: 18, weight: .semibold)
+                    .withFontWWinsport(size: 18, weight: .semibold)
                     .padding(.vertical, 8)
                 
                 Text("This formula provides an estimate of daily caloric needs and may not be suitable for everyone. Please consult a healthcare professional before relying on these calculations to ensure they are appropriate for your individual health needs.")
-                    .withFont(size: 18, weight: .regular)
+                    .withFontWWinsport(size: 18, weight: .regular)
                 
                 Text("This formula is derived from recognized medical and nutritional research:")
-                    .withFont(size: 18, weight: .regular)
+                    .withFontWWinsport(size: 18, weight: .regular)
                     .padding(.bottom)
                 
                 VStack(alignment: .leading, spacing: 8) {
                     Text("- Harris JA, Benedict FG. \"A Biometric Study of Basal Metabolism in Man,\" Proceedings of the National Academy of Sciences, 1918.")
-                        .withFont(size: 18, weight: .regular)
+                        .withFontWWinsport(size: 18, weight: .regular)
                     Link("Read Online (PDF)", destination: URL(string: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1680745/")!)
                     
                     Text("- Roza AM, Shizgal HM. \"The Harris Benedict equation reevaluated: resting energy requirements and the body cell maWinersport,\" American Journal of Clinical Nutrition, 1984.")
-                        .withFont(size: 18, weight: .regular)
+                        .withFontWWinsport(size: 18, weight: .regular)
                     Link("Source on PubMed", destination: URL(string: "https://pubmed.ncbi.nlm.nih.gov/6741850/")!)
                     
                     Text("- For further reliable medical references, visit:")
-                        .withFont(size: 18, weight: .regular)
+                        .withFontWWinsport(size: 18, weight: .regular)
                     Link("World Health Organization (WHO)", destination: URL(string: "https://www.who.int")!)
                     Link("National Institutes of Health (NIH)", destination: URL(string: "https://www.nih.gov")!)
                 }
-                .withFont(size: 18, weight: .regular, color: .blue)
+                .withFontWWinsport(size: 18, weight: .regular, color: .blue)
             }
-        }.background(3)
+        }.backgroundWinsport(3)
             .presentationDetents([.fraction(0.5)])
     }
     
@@ -198,7 +198,7 @@ struct KcalView: View {
             VStack {
                 VStack {
                     Text("Age")
-                        .withFont(size: 22, weight: .regular)
+                        .withFontWWinsport(size: 22, weight: .regular)
                         .padding(.horizontal)
                     TextField("Your Age...", text: $userAgeString)
                         .padding(.horizontal)
@@ -212,7 +212,7 @@ struct KcalView: View {
                 
                 VStack {
                     Text("Weight")
-                        .withFont(size: 22, weight: .regular)
+                        .withFontWWinsport(size: 22, weight: .regular)
                         .padding(.horizontal)
                     
                     TextField("Your Weight...", text: $userWeightString)
@@ -229,7 +229,7 @@ struct KcalView: View {
                 
                 VStack {
                     Text("Lifestyle")
-                        .withFont(size: 26, weight: .light)
+                        .withFontWWinsport(size: 26, weight: .light)
                     
                     VStack {
                         Button {
@@ -240,13 +240,13 @@ struct KcalView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .overlay {
                                     Text("Moderate")
-                                        .withFont(size: 22.5, weight: .thin)
+                                        .withFontWWinsport(size: 22.5, weight: .thin)
                                 }
                                 .overlay(alignment: .leading) {
                                     Image("kcal.chek.\(lifestyle == 1 ? "on": "off")")
                                         .padding(.leading)
                                 }
-                        }.frame(width: screen.width * 0.7)
+                        }.frame(width: screenWinsport.width * 0.7)
                         
                         Button {
                             lifestyle = 2
@@ -256,13 +256,13 @@ struct KcalView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .overlay {
                                     Text("Higth")
-                                        .withFont(size: 22.5, weight: .thin)
+                                        .withFontWWinsport(size: 22.5, weight: .thin)
                                 }
                                 .overlay(alignment: .leading) {
                                     Image("kcal.chek.\(lifestyle == 2 ? "on": "off")")
                                         .padding(.leading)
                                 }
-                        }.frame(width: screen.width * 0.7)
+                        }.frame(width: screenWinsport.width * 0.7)
                         
                         Button {
                             lifestyle = 3
@@ -272,13 +272,13 @@ struct KcalView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .overlay {
                                     Text("Very Low")
-                                        .withFont(size: 22.5, weight: .thin)
+                                        .withFontWWinsport(size: 22.5, weight: .thin)
                                 }
                                 .overlay(alignment: .leading) {
                                     Image("kcal.chek.\(lifestyle == 3 ? "on": "off")")
                                         .padding(.leading)
                                 }
-                        }.frame(width: screen.width * 0.7)
+                        }.frame(width: screenWinsport.width * 0.7)
                         
                         Button {
                             lifestyle = 4
@@ -288,19 +288,19 @@ struct KcalView: View {
                                 .aspectRatio(contentMode: .fit)
                                 .overlay {
                                     Text("Intense")
-                                        .withFont(size: 22.5, weight: .thin)
+                                        .withFontWWinsport(size: 22.5, weight: .thin)
                                 }
                                 .overlay(alignment: .leading) {
                                     Image("kcal.chek.\(lifestyle == 4 ? "on": "off")")
                                         .padding(.leading)
                                 }
-                        }.frame(width: screen.width * 0.7)
+                        }.frame(width: screenWinsport.width * 0.7)
                     }
                 }
                 
                 VStack {
                     Text("Spoart goal")
-                        .withFont(size: 26, weight: .light)
+                        .withFontWWinsport(size: 26, weight: .light)
                     
                     Button {
                         sportgoal = 1
@@ -310,13 +310,13 @@ struct KcalView: View {
                             .aspectRatio(contentMode: .fit)
                             .overlay {
                                 Text("Weight again")
-                                    .withFont(size: 22.5, weight: .thin)
+                                    .withFontWWinsport(size: 22.5, weight: .thin)
                             }
                             .overlay(alignment: .leading) {
                                 Image("kcal.chek.\(sportgoal == 1 ? "on": "off")")
                                     .padding(.leading)
                             }
-                    }.frame(width: screen.width * 0.7)
+                    }.frame(width: screenWinsport.width * 0.7)
                         
                     Button {
                         sportgoal = 2
@@ -326,13 +326,13 @@ struct KcalView: View {
                             .aspectRatio(contentMode: .fit)
                             .overlay {
                                 Text("Retention")
-                                    .withFont(size: 22.5, weight: .thin)
+                                    .withFontWWinsport(size: 22.5, weight: .thin)
                             }
                             .overlay(alignment: .leading) {
                                 Image("kcal.chek.\(sportgoal == 2 ? "on": "off")")
                                     .padding(.leading)
                             }
-                    }.frame(width: screen.width * 0.7)
+                    }.frame(width: screenWinsport.width * 0.7)
                     
                     Button {
                         sportgoal = 3
@@ -342,13 +342,13 @@ struct KcalView: View {
                             .aspectRatio(contentMode: .fit)
                             .overlay {
                                 Text("Weight loss")
-                                    .withFont(size: 22.5, weight: .thin)
+                                    .withFontWWinsport(size: 22.5, weight: .thin)
                             }
                             .overlay(alignment: .leading) {
                                 Image("kcal.chek.\(sportgoal == 3 ? "on": "off")")
                                     .padding(.leading)
                             }
-                    }.frame(width: screen.width * 0.7)
+                    }.frame(width: screenWinsport.width * 0.7)
                 }
                 
                 
@@ -361,7 +361,7 @@ struct KcalView: View {
                     calculateCalories()
                 } label: {
                     Text("Next")
-                        .withFont(size: 18, weight: .medium, color: .hex("2E023F"))
+                        .withFontWWinsport(size: 18, weight: .medium, color: .hex("2E023F"))
                         .padding(.vertical, 11)
                         .padding(.horizontal, 30)
                         .background(Color.hex("FEE600"))
@@ -372,7 +372,7 @@ struct KcalView: View {
                 
                 if !chekAnswers() {
                     Text("Enter valid data.")
-                        .withFont(size: 15, weight: .medium)
+                        .withFontWWinsport(size: 15, weight: .medium)
                         .padding(.bottom)
                 }
             }
@@ -419,17 +419,49 @@ struct KcalView: View {
         kkcal = Int(dailyCalories)
     }
     
-    var erverv = 134134
-    var ceqfcwrefc = 13413.13413
-    func qrevqrvrg() -> CGFloat {
-        return 314134.1343
+    var name: String = "Default Name"
+    var age: Int = 0
+    var isActive: Bool = false
+    var scores: [Int] = [10, 20, 30]
+    var createdDate: Date = Date()
+    
+    // Функції
+    func printDetails() {
+        print("Name: \(name), Age: \(age), Active: \(isActive)")
     }
-    func vwrwrqrf() {
-        print("wrv")
-        print(134)
+    
+    mutating func incrementAge(by years: Int) {
+        age += years
     }
-    var wtywtyw = [24524:"wrvwr"]
-    var twtyw5gw5tgw = 4524
+    
+    func averageScore() -> Double {
+        guard !scores.isEmpty else { return 0.0 }
+        let total = scores.reduce(0, +)
+        return Double(total) / Double(scores.count)
+    }
+    
+    mutating func toggleActiveState() {
+        isActive.toggle()
+    }
+    
+    func isAdult() -> Bool {
+        return age >= 18
+    }
+    
+    func greeting() -> String {
+        return "Hello, \(name)! Welcome back!"
+    }
+    
+    mutating func addScore(_ newScore: Int) {
+        scores.append(newScore)
+    }
+    
+    func formatCreatedDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: createdDate)
+    }
 }
 
 #Preview {

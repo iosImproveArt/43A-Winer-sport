@@ -5,21 +5,21 @@ import SwiftUI
 
 
 extension View {
-    var isSE: Bool {
+    var isSEWinsport: Bool {
         return UIScreen.main.bounds.height < 680
     }
     
-    var screen: CGRect {
+    var screenWinsport: CGRect {
         return UIScreen.main.bounds
     }
     
-    func withFont(size: CGFloat, weight: Font.Weight, color: Color = .white) -> some View {
+    func withFontWWinsport(size: CGFloat, weight: Font.Weight, color: Color = .white) -> some View {
         return self
             .font(.system(size: size, weight: weight))
             .foregroundStyle(color)
     }
     
-    func background(_ number: Int, padding: CGFloat = 12) -> some View {
+    func backgroundWinsport(_ number: Int, padding: CGFloat = 12) -> some View {
         self
             .padding(padding)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -29,10 +29,10 @@ extension View {
                     .edgesIgnoringSafeArea(.all)
                     .aspectRatio(contentMode: .fill)
             )
-            .navigationItemsClose()
+            .navigationItemsCloseWinsport()
     }
     
-    func navigationItemsClose() -> some View {
+    func navigationItemsCloseWinsport() -> some View {
         self
             .navigationBarBackButtonHidden()
             .navigationTitle("")
