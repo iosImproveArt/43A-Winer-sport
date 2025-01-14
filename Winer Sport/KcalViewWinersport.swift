@@ -341,7 +341,7 @@ struct KcalView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .overlay {
-                                Text("Weight loWinersport")
+                                Text("Weight loss")
                                     .withFont(size: 22.5, weight: .thin)
                             }
                             .overlay(alignment: .leading) {
