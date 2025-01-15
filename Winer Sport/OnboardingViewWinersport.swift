@@ -61,7 +61,8 @@ struct OnboardingViewWinersport: View {
             
             Spacer()
             
-            
+            Text("Click anywhere to skip")
+                .withFontWWinsport(size: 15, weight: .bold)
             HStack(spacing: 1) {
                 ForEach(Array(1...5), id: \.self) { index in
                     RoundedRectangle(cornerRadius: .infinity)
