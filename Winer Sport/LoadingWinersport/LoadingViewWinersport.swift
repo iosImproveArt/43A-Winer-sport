@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct LoadingViewWinersport: View {
+struct LoadingViewWinersport43: View {
     @AppStorage("firstInApp") var firstInApp = true
     var jnir = 235
     @Binding var showView: Bool
@@ -84,7 +84,7 @@ struct LoadingViewWinersport: View {
                 Spacer()
             }.backgroundWinsport(2)
             
-            PrivacyViewWinersport(showLoading: $showView)
+            PrivacyViewWinersport43(showLoading: $showView)
                 .opacity(firstInApp ? 1: 0)
         }.onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -101,6 +101,6 @@ struct LoadingViewWinersport: View {
 
 
 #Preview {
-    LoadingViewWinersport(showView: .constant(true))
+    LoadingViewWinersport43(showView: .constant(true))
 }
 

@@ -81,7 +81,7 @@ struct WebViewContainer: UIViewRepresentable {
                 } else {
                     if UIApplication.shared.canOpenURL(url) {
                         
-                        UIApplication.shared.open(url, options: [:]) { succeWinersport in
+                        UIApplication.shared.open(url, options: [:]) { succeWinersport43 in
                             decisionHandler(.cancel)
                         }
                     } else {

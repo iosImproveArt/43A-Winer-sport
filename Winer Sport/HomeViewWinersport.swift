@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-struct HomeViewWinersport: View {
+struct HomeViewWinersport43: View {
     @AppStorage("secondsWaste") var secondsWaste = 0
     @AppStorage("wasTrained") var wasTrained = false
     
@@ -58,7 +58,7 @@ struct HomeViewWinersport: View {
         ScrollView {
                 VStack {
                     NavigationLink {
-                        TrainingViewWinersport(sportType: .cricket)
+                        TrainingViewWinersport43(sportType: .cricket)
                     } label: {
                         Image("cricket.label")
                             .overlay {
@@ -70,7 +70,7 @@ struct HomeViewWinersport: View {
                     }.disabled(wasTrained)
                     
                     NavigationLink {
-                        TrainingViewWinersport(sportType: .golf)
+                        TrainingViewWinersport43(sportType: .golf)
                     } label: {
                         Image("golf.label")
                             .overlay {
@@ -82,7 +82,7 @@ struct HomeViewWinersport: View {
                     }.disabled(wasTrained)
                     
                     NavigationLink {
-                        TrainingViewWinersport(sportType: .basketball)
+                        TrainingViewWinersport43(sportType: .basketball)
                     } label: {
                         Image("basketball.label")
                             .overlay {
@@ -94,7 +94,7 @@ struct HomeViewWinersport: View {
                     }.disabled(wasTrained)
                     
                     NavigationLink {
-                        TrainingViewWinersport(sportType: .handball)
+                        TrainingViewWinersport43(sportType: .handball)
                     } label: {
                         Image("handball.label")
                             .overlay {
@@ -106,7 +106,7 @@ struct HomeViewWinersport: View {
                     }.disabled(wasTrained)
                     
                     NavigationLink {
-                        TrainingViewWinersport(sportType: .tennis)
+                        TrainingViewWinersport43(sportType: .tennis)
                     } label: {
                         Image("tennis.label")
                             .overlay {
@@ -121,7 +121,7 @@ struct HomeViewWinersport: View {
                     .padding(.horizontal, -12)
             
                 NavigationLink {
-                    TrainingViewWinersport(sportType: SportTypes(rawValue: favourite) ?? .basketball
+                    TrainingViewWinersport43(sportType: SportTypes(rawValue: favourite) ?? .basketball
                     )
                 } label: {
                     Image("favourite.workout")
@@ -193,7 +193,7 @@ struct HomeViewWinersport: View {
 }
 
 #Preview {
-    ContentViewWinersport(showLoading: false, selectedTab: .home)
+    ContentViewWinersport43(showLoading: false, selectedTab: .home)
 }
 
 

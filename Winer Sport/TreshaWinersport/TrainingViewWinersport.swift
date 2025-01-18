@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-struct TrainingViewWinersport: View {
+struct TrainingViewWinersport43: View {
     @StateObject var vm: TrainViewModel
     @Environment(\.dismiss) var dismiss
     
@@ -211,7 +211,7 @@ struct TrainingViewWinersport: View {
 }
 
 #Preview {
-    TrainingViewWinersport(sportType: .basketball)
+    TrainingViewWinersport43(sportType: .basketball)
 }
 
 class TrainViewModel: ObservableObject {

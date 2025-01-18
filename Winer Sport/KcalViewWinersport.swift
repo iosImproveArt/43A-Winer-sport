@@ -141,7 +141,7 @@ struct KcalView: View {
         }.grayscale(showInfoSheet ? 1: 0)
             .animation(.easeInOut, value: showInfoSheet)
         .sheet(isPresented: $showSheet) {
-            ProfileViewWinersport()
+            ProfileViewWinersport43()
                 .presentationDetents([.fraction(0.9)])
         }
         .sheet(isPresented: $showInfoSheet) {
@@ -178,7 +178,7 @@ struct KcalView: View {
                         .withFontWWinsport(size: 18, weight: .regular)
                     Link("Read Online (PDF)", destination: URL(string: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1680745/")!)
                     
-                    Text("- Roza AM, Shizgal HM. \"The Harris Benedict equation reevaluated: resting energy requirements and the body cell maWinersport,\" American Journal of Clinical Nutrition, 1984.")
+                    Text("- Roza AM, Shizgal HM. \"The Harris Benedict equation reevaluated: resting energy requirements and the body cell maWinersport43,\" American Journal of Clinical Nutrition, 1984.")
                         .withFontWWinsport(size: 18, weight: .regular)
                     Link("Source on PubMed", destination: URL(string: "https://pubmed.ncbi.nlm.nih.gov/6741850/")!)
                     
@@ -465,5 +465,5 @@ struct KcalView: View {
 }
 
 #Preview {
-    ContentViewWinersport(showLoading: false, selectedTab: .profile)
+    ContentViewWinersport43(showLoading: false, selectedTab: .profile)
 }

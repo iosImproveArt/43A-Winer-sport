@@ -62,7 +62,7 @@ struct DayliStrerchView: View {
             
             HStack {
                 NavigationLink {
-                    TrainingViewWinersport(sportType: .stretch)
+                    TrainingViewWinersport43(sportType: .stretch)
                 } label: {
                     Text("Start")
                         .withFontWWinsport(size: 18, weight: .medium, color: .hex("2E023F"))
@@ -83,5 +83,5 @@ struct DayliStrerchView: View {
 }
 
 #Preview {
-    ContentViewWinersport(showLoading: false, selectedTab: .stretch)
+    ContentViewWinersport43(showLoading: false, selectedTab: .stretch)
 }

@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct ContentViewWinersport: View {
+struct ContentViewWinersport43: View {
     @AppStorage("wasTrained") var wasTrained = false
     @State var showLoading = true
     @State var selectedTab: Tabs = .home
@@ -64,11 +64,11 @@ struct ContentViewWinersport: View {
                         Group {
                             switch selectedTab {
                             case .home:
-                                HomeViewWinersport()
+                                HomeViewWinersport43()
                             case .profile:
                                 KcalView()
                             case .quotes:
-                                QuotesViewWinersport()
+                                QuotesViewWinersport43()
                             case .stretch:
                                 DayliStrerchView()
                             }
@@ -82,9 +82,9 @@ struct ContentViewWinersport: View {
                 }
             }
             
-            OnboardingViewWinersport()
+            OnboardingViewWinersport43()
             
-            LoadingViewWinersport(showView: $showLoading)
+            LoadingViewWinersport43(showView: $showLoading)
                 .opacity(showLoading ? 1: 0)
                 .onChange(of: showLoading) { newValue in
                     AppDelegate.orientationLock = .portrait
@@ -223,7 +223,7 @@ struct ContentViewWinersport: View {
 }
 
 #Preview {
-    ContentViewWinersport(showLoading: false)
+    ContentViewWinersport43(showLoading: false)
 }
 
 

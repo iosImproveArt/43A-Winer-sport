@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct ProfileViewWinersport: View {
+struct ProfileViewWinersport43: View {
     @Environment(\.dismiss) var dismiss
     @State var userPhoto = ""
     @State var userName = ""
@@ -310,7 +310,7 @@ struct ProfileViewWinersport: View {
 }
 
 #Preview {
-    ContentViewWinersport(showLoading: false, selectedTab: .profile)
+    ContentViewWinersport43(showLoading: false, selectedTab: .profile)
 }
 
 
